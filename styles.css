@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Rubik&family=Tilt+Neon&family=Work+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(36, 84, 156);
+    font-size: 45px;
+}
+
+.background-transition {
+    background: rgba(0, 0, 0,0.1) url('img/webdsgn.svg') center/cover no-repeat fixed;
+    transition: background 1s;
+    z-index: 99999;
+}
+
+#txt1 {
+    color: rgb(67, 68, 68);
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 250px;
+}
+
+.service-box {
+    position: relative;
+    top: 22px;
+    width: 27%;
+    height: 130px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 22px;
+    background-color: rgb(36, 84, 156);
+}
+.service-box:hover {
+    width: 27%;
+    height: 130px;
+
+    position: relative;
+    top: 22px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: rgb(14, 56, 121);
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+}
+.getbox{
+    position: relative;
+    top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    width: 20%;
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    height: 40px;
+    color: rgb(252, 252, 252);
+    padding: 20px;
+    border: 10px solid rgb(31, 85, 167);
+    text-align: center;
+}
+.getbox h2{
+    color: white;
+}
+/* Hide the overflow to make the text appear as if it's being typed */
+
+.slogan {
+    position: relative;
+    bottom: 22px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(14, 56, 121);
+    font-size: 22px;
+    height: 30px;
+}
+
+#typing-container {
+    width: 400px; /* Adjust the width to your preference */
+    text-align: center; /* Center-align the text within the container */
+    overflow: hidden;
+}
+
+#typing-content {
+    display: inline-block;
+}
+
+.typing-cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.getbox:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    width: 20%;
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    height: 40px;
+    color: rgb(252, 252, 252);
+    padding: 20px;
+    text-align: center;
+    border: 10px solid rgb(31, 85, 167);
+    animation: glow 1s infinite; /* Add this animation property for the glowing effect */
+}
+
+@keyframes glow {
+    0% {
+        border-color: #1F55A7; /* Initial border color */
+        box-shadow: 0 0 5px #1F55A7; /* Initial shadow color and size */
+    }
+    50% {
+        border-color: #1F55A7; /* Midpoint border color */
+        box-shadow: 0 0 20px #1F55A7; /* Midpoint shadow color and size */
+    }
+    100% {
+        border-color: #1F55A7; /* Final border color */
+        box-shadow: 0 0 5px #1F55A7; /* Final shadow color and size */
+    }
+}
+a {
+    text-decoration: none;
+}
+.title {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    padding-left: 44px;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.content-container {
+    opacity: 0;
+    transition: opacity 1s;
+    display: flex;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    left: 18vw;
+}
+.logo{
+    position: relative;
+    right: 38px;
+    bottom: 19px;
+}
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+.loader-ring {
+    position: absolute;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #1F55A7; /* Adjust color as needed */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 1.5s linear infinite;
+    z-index: 999;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
