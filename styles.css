@@ -16,7 +16,7 @@ h1 {
 }
 
 .background-transition {
-    background: rgba(0, 0, 0,0.1) url('img/webdsgn.svg') center/cover no-repeat fixed;
+    background: rgba(0, 0, 0,0.1) url('webdsgn.svg') center/cover no-repeat fixed;
     transition: background 1s;
     z-index: 99999;
 }
